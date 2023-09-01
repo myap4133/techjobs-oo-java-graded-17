@@ -50,4 +50,50 @@ public class JobTest {
 
         org.junit.Assert.assertFalse(job1.equals(job2));
     }
+
+    @Test
+    public void testToStringStartsAndEndsWithNewLine() {
+        Job job = new Job();
+
+        org.junit.Assert.assertTrue(job.toString().startsWith(System.lineSeparator()));
+        org.junit.Assert.assertTrue(job.toString().endsWith(System.lineSeparator()));
+    }
+
+    @Test
+    public void testToStringContainsCorrectLabelsAndData() {
+        Employer employer = new Employer("ACME");
+        Location location = new Location("Desert");
+        PositionType position = new PositionType("Quality control");
+        CoreCompetency competency = new CoreCompetency("Persistence");
+
+        Job job = new Job("Product tester", employer, location,
+                position, competency);
+
+        String expectedString = System.lineSeparator() +
+                "ID: " + job.getId() +
+                "\nName: " + "Product tester" +
+                "\nEmployer: " + employer.toString() +
+                "\nLocation: " + location.toString() +
+                "\nPosition Type: " + position.toString() +
+                "\nCore Competency: " + competency.toString() +
+                System.lineSeparator();
+
+        org.junit.Assert.assertEquals(job.toString(), expectedString);
+    }
+
+    @Test
+    public void testToStringHandlesEmptyField() {
+        Job job = new Job();
+
+        String expectedString = System.lineSeparator() +
+                "ID: " + job.getId() +
+                "\nName: " + "Data not available" +
+                "\nEmployer: " + "Data not available" +
+                "\nLocation: " + "Data not available" +
+                "\nPosition Type: " + "Data not available" +
+                "\nCore Competency: " + "Data not available" +
+                System.lineSeparator();
+
+        org.junit.Assert.assertEquals(job.toString(), expectedString);
+    }
 }

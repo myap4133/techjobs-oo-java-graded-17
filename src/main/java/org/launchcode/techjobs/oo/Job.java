@@ -91,4 +91,57 @@ public class Job {
     public void setCoreCompetency(CoreCompetency coreCompetency) {
         this.coreCompetency = coreCompetency;
     }
+
+    @Override
+    public String toString() {
+        String nameInfo;
+        String employerInfo;
+        String locationInfo;
+        String positionInfo;
+        String competencyInfo;
+
+        if(name == null){
+            nameInfo = "Data not available";
+        }
+        else{
+            nameInfo = name;
+        }
+
+        if(employer == null){
+            employerInfo = "Data not available";
+        }
+        else{
+            employerInfo = employer.toString();
+        }
+
+        if(location == null){
+            locationInfo = "Data not available";
+        }
+        else{
+            locationInfo = location.toString();
+        }
+
+        if(positionType == null){
+            positionInfo = "Data not available";
+        }
+        else {
+            positionInfo = positionType.toString();
+        }
+
+        if(coreCompetency == null){
+            competencyInfo = "Data not available";
+        }
+        else {
+            competencyInfo = coreCompetency.toString();
+        }
+
+        return System.lineSeparator() +
+                "ID: " + id +
+                "\nName: " + nameInfo +
+                "\nEmployer: " + employerInfo +
+                "\nLocation: " + locationInfo +
+                "\nPosition Type: " + positionInfo +
+                "\nCore Competency: " + competencyInfo +
+                System.lineSeparator();
+    }
 }
