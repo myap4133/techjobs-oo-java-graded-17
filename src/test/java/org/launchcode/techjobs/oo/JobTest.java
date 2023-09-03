@@ -85,7 +85,13 @@ public class JobTest {
     public void testToStringHandlesEmptyField() {
         Job job = new Job();
 
-        String expectedString = System.lineSeparator() +
+        Employer employer = new Employer("Lockheed Martin");
+        Location location = new Location("");
+        PositionType position = new PositionType("Quality control");
+        CoreCompetency competency = new CoreCompetency("");
+        Job jobWithFewFields = new Job("Web Dev", employer, location, position, competency);
+
+        String expectedString1 = System.lineSeparator() +
                 "ID: " + job.getId() +
                 "\nName: " + "Data not available" +
                 "\nEmployer: " + "Data not available" +
@@ -94,6 +100,16 @@ public class JobTest {
                 "\nCore Competency: " + "Data not available" +
                 System.lineSeparator();
 
-        org.junit.Assert.assertEquals(job.toString(), expectedString);
+        String expectedString2 = System.lineSeparator() +
+                "ID: " + jobWithFewFields.getId() +
+                "\nName: " + "Web Dev" +
+                "\nEmployer: " + "Lockheed Martin" +
+                "\nLocation: " + "Data not available" +
+                "\nPosition Type: " + "Quality control" +
+                "\nCore Competency: " + "Data not available" +
+                System.lineSeparator();
+
+        org.junit.Assert.assertEquals(job.toString(), expectedString1);
+        org.junit.Assert.assertEquals(jobWithFewFields.toString(), expectedString2);
     }
 }

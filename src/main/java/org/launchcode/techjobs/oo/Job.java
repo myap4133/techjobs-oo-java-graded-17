@@ -100,35 +100,35 @@ public class Job {
         String positionInfo;
         String competencyInfo;
 
-        if(name == null){
+        if(name == null || name.isEmpty()){
             nameInfo = "Data not available";
         }
         else{
             nameInfo = name;
         }
 
-        if(employer == null){
+        if(employer == null || employer.toString().isEmpty()){
             employerInfo = "Data not available";
         }
         else{
             employerInfo = employer.toString();
         }
 
-        if(location == null){
+        if(location == null || location.toString().isEmpty()){
             locationInfo = "Data not available";
         }
         else{
             locationInfo = location.toString();
         }
 
-        if(positionType == null){
+        if(positionType == null || positionType.toString().isEmpty()){
             positionInfo = "Data not available";
         }
         else {
             positionInfo = positionType.toString();
         }
 
-        if(coreCompetency == null){
+        if(coreCompetency == null || coreCompetency.toString().isEmpty()){
             competencyInfo = "Data not available";
         }
         else {
