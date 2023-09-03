@@ -55,8 +55,8 @@ public class JobTest {
     public void testToStringStartsAndEndsWithNewLine() {
         Job job = new Job();
 
-        org.junit.Assert.assertTrue(job.toString().startsWith(System.lineSeparator()));
-        org.junit.Assert.assertTrue(job.toString().endsWith(System.lineSeparator()));
+        org.junit.Assert.assertEquals(job.toString().startsWith(System.lineSeparator()), true);
+        org.junit.Assert.assertEquals(job.toString().endsWith(System.lineSeparator()), true);
     }
 
     @Test
