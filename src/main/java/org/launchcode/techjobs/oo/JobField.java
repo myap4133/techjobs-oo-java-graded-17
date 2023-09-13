@@ -23,12 +23,7 @@ public abstract class JobField {
     }
 
     @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        JobField jobField = (JobField) o;
-        return getId() == jobField.getId() && Objects.equals(getValue(), jobField.getValue());
-    }
+    public abstract boolean equals(Object o);
 
     @Override
     public int hashCode() {

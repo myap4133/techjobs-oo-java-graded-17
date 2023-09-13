@@ -94,46 +94,11 @@ public class Job {
 
     @Override
     public String toString() {
-        String nameInfo;
-        String employerInfo;
-        String locationInfo;
-        String positionInfo;
-        String competencyInfo;
-
-        if(name == null || name.isEmpty()){
-            nameInfo = "Data not available";
-        }
-        else{
-            nameInfo = name;
-        }
-
-        if(employer == null || employer.toString().isEmpty()){
-            employerInfo = "Data not available";
-        }
-        else{
-            employerInfo = employer.toString();
-        }
-
-        if(location == null || location.toString().isEmpty()){
-            locationInfo = "Data not available";
-        }
-        else{
-            locationInfo = location.toString();
-        }
-
-        if(positionType == null || positionType.toString().isEmpty()){
-            positionInfo = "Data not available";
-        }
-        else {
-            positionInfo = positionType.toString();
-        }
-
-        if(coreCompetency == null || coreCompetency.toString().isEmpty()){
-            competencyInfo = "Data not available";
-        }
-        else {
-            competencyInfo = coreCompetency.toString();
-        }
+        String nameInfo = getData(name);
+        String employerInfo = getData(employer);
+        String locationInfo = getData(location);
+        String positionInfo = getData(positionType);
+        String competencyInfo = getData(coreCompetency);
 
         return System.lineSeparator() +
                 "ID: " + id +
@@ -143,5 +108,14 @@ public class Job {
                 "\nPosition Type: " + positionInfo +
                 "\nCore Competency: " + competencyInfo +
                 System.lineSeparator();
+    }
+
+    private String getData(Object dataField){
+        if(dataField == null || dataField.toString().isEmpty()){
+            return "Data not available";
+        }
+        else {
+            return dataField.toString();
+        }
     }
 }

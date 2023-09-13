@@ -4,9 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="59ff47a6-ece6-4e2e-b777-6247aa1f282e" name="Changes" comment="Removed repeating code and create JobField class for extension">
+    <list default="true" id="59ff47a6-ece6-4e2e-b777-6247aa1f282e" name="Changes" comment="Fixed Job class toString method and added another unit test to JobTest">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/launchcode/techjobs/oo/Job.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/launchcode/techjobs/oo/Job.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/launchcode/techjobs/oo/JobField.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/launchcode/techjobs/oo/JobField.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -144,7 +145,15 @@
       <option name="project" value="LOCAL" />
       <updated>1693763618390</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Fixed Job class toString method and added another unit test to JobTest">
+      <option name="closed" value="true" />
+      <created>1693765720128</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1693765720128</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -153,6 +162,7 @@
     <MESSAGE value="Added test methods to JobTest class" />
     <MESSAGE value="Added test methods and toString for Job class" />
     <MESSAGE value="Removed repeating code and create JobField class for extension" />
-    <option name="LAST_COMMIT_MESSAGE" value="Removed repeating code and create JobField class for extension" />
+    <MESSAGE value="Fixed Job class toString method and added another unit test to JobTest" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed Job class toString method and added another unit test to JobTest" />
   </component>
 </project>
